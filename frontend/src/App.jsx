@@ -2,18 +2,15 @@
 import {Routes, BrowserRouter, Route} from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import './App.css'
+import PostJob from "./components/PostJob"
 
 function App() {
 
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<LandingPage />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+
+    <div><PostJob/></div>
+      
+  );
 }
 
 export default App
