@@ -1,0 +1,617 @@
+/* BASE */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: #f0f4f8;
+}
+
+/* SIDEBAR — hidden on mobile */
+.sidebar {
+  display: none;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  background: #0f2d52;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hamburger {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.brand {
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notif {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 9px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #22c55e;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MOBILE DROPDOWN MENU */
+.mobileMenu {
+  background: #0f2d52;
+  padding: 8px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileMenuItem {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.mobileMenuItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobileMenuLogout {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #f87171;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 4px;
+}
+
+/* HERO */
+.hero {
+  background: #0f2d52;
+  padding: 12px 18px 18px;
+}
+
+.heroSub {
+  color: #93c5fd;
+  font-size: 13px;
+  margin: 0;
+}
+
+.heroTitle {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 4px 0 14px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.searchInput {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* BODY */
+.body {
+  flex: 1;
+  padding-bottom: 80px;
+}
+
+.sectionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px 8px;
+}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.seeAll {
+  background: none;
+  border: none;
+  color: #22c55e;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* SERVICES */
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  padding: 0 18px;
+}
+
+.serviceBtn {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 10px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.serviceIcon {
+  font-size: 20px;
+}
+
+.serviceLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* STATS */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 14px 18px;
+}
+
+.statBox {
+  border-radius: 12px;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.statNum {
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.statLabel {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11px;
+}
+
+/* JOB CARDS */
+.jobGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 0 18px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  font-weight: 700;
+  font-size: 14px;
+  color: #111827;
+  margin: 0;
+}
+
+.cardDate {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 3px 0 0;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.workerInfo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workerName {
+  font-size: 12px;
+  color: #374151;
+  font-weight: 600;
+}
+
+.jobBudget {
+  font-weight: 800;
+  font-size: 15px;
+  color: #0f2d52;
+}
+
+.empty {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  padding: 24px;
+}
+
+/* WORKER CARDS */
+.workerScroll {
+  display: flex;
+  gap: 12px;
+  padding: 0 18px 8px;
+  overflow-x: auto;
+}
+
+.workerCard {
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px;
+  min-width: 145px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.workerAvatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 800;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workerName2 {
+  font-weight: 700;
+  font-size: 13px;
+  color: #111827;
+  margin: 0;
+  text-align: center;
+}
+
+.workerRole {
+  font-size: 11px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.workerRating {
+  font-size: 11px;
+  color: #374151;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tagRow {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tag {
+  background: #f0fdf4;
+  color: #16a34a;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+
+.hireBtn {
+  margin-top: 4px;
+  background: #0f2d52;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 0;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* BOTTOM NAV — mobile only */
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0 6px;
+  z-index: 100;
+}
+
+.navBtn {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+  padding: 4px 10px;
+  position: relative;
+}
+
+.navIcon {
+  font-size: 20px;
+}
+
+.navLabel {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.navDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #22c55e;
+  position: absolute;
+  bottom: -2px;
+}
+
+/* TABLET */
+@media (min-width: 640px) {
+  .jobGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    padding: 16px 24px 20px;
+  }
+
+  .sectionRow {
+    padding: 16px 24px 8px;
+  }
+
+  .serviceGrid {
+    padding: 0 24px;
+  }
+
+  .statsRow {
+    padding: 14px 24px;
+  }
+
+  .jobGrid {
+    padding: 0 24px;
+  }
+
+  .workerScroll {
+    padding: 0 24px 8px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  /* Show sidebar */
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    background: #0f2d52;
+    min-height: 100vh;
+    padding: 24px 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    flex-shrink: 0;
+  }
+
+  .sidebarBrand {
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 0 20px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 12px;
+  }
+
+  .sideNavItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+
+  .sideNavItem:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+
+  .sideNavItemActive {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(34, 197, 94, 0.15);
+    border: none;
+    border-left: 3px solid #22c55e;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+
+  .sideLogout {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    color: #f87171;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Hide hamburger and bottom nav on desktop */
+  .hamburger {
+    display: none;
+  }
+
+  .bottomNav {
+    display: none;
+  }
+
+  .hero {
+    padding: 24px 40px 28px;
+  }
+
+  .sectionRow {
+    padding: 20px 40px 10px;
+  }
+
+  .serviceGrid {
+    padding: 0 40px;
+  }
+
+  .statsRow {
+    padding: 16px 40px;
+  }
+
+  .jobGrid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 40px;
+  }
+
+  .workerScroll {
+    padding: 0 40px 8px;
+  }
+
+  .body {
+    padding-bottom: 40px;
+  }
+}
